@@ -1,5 +1,5 @@
 :root {
-    font-size: 15px;
+    font-size: 62.5%; /* conta como 10px */
 }
 
 * {
@@ -9,51 +9,68 @@
 
 body,
 html {
-    box-sizing: border-box;
     height: 100vh;
     width: 100vw;
-    background:#181719;
+    box-sizing: border-box;
     overflow: hidden;
-    color: #FFFFFF;
+    background:#181719;
 }
 
 div#container {
     height: 100%;
     width: 100%;
+    color: #FFFFFF;
 }
 
 header {
+    height: auto;
     width: 100%;
-    height: 14%;
+    max-width: 1366px;
+
     display: flex;
-    margin: 0px 76px 0px 76px;
+    align-items: flex-end;
+    
+    padding-top: 3rem;
 }
 
 div.logo {
-    height: 35%;
-    width: 8%;
-    border: 1px solid white;
-    padding: 5px;
-    font-size: 1rem;
+    height: 35px;
+    width: 100%;
+    max-width: 100px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem;
+    margin-left: 8rem;    
+
+    font-size: 1.3rem;
     font-family: 'Crimson Text', serif;
     text-transform: uppercase;
-    margin-top: 40px;
+    font-weight: bold;
+    
+    border: 1px solid white;
 }
 
 header nav {
+    height: auto;
     width: 80%;
+    
     display: flex;
     justify-content: flex-end;
+    
+    margin-right: 8rem;
+
     font-family: Montserrat;
-    margin-right: 5%;
+    font-size: 1.7rem;
 }
 
 a {
-    margin-top: 3rem;
     text-decoration: none;
     color: rgb(238, 237, 237);
     font-weight: bold;
-    font-size: 1.2rem;
     transition: .2s;
 }
 
@@ -70,37 +87,41 @@ header a:hover {
 }
 
 main {
-    height: 70%;
-    width: 100%;
+    height: auto;
+    width: auto;
+    max-width: 1366px;
+    
+    margin-top: 6rem;
+    
     display: flex;
 }
 
 div.texts {
-    height: 70%;
-    width: 40%;
-    margin: 55px 87px 0px 77px;
-    font-family: Montserrat;
-    font-size: 1.5rem;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+
     display: flex;
     flex-direction: column;
     position: relative;
+    
+    margin-left: 8rem;
+    
+    font-family: Montserrat;
+    font-size: 1.5rem;
 }
 
 div.texts h1 {
     font-family: Lora;
-    font-size: 2rem;
+    font-size: 2.7rem;
     margin-bottom: 41px;
+    font-weight: normal;
 }
 
 div.texts p {
-    margin-bottom: 48px;
-    height: 30%;
-    width: 100%;
-}
-
-div.texts a {
-    position: absolute;
-    bottom: 0;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    line-height: 3rem;
 }
 
 div.texts a:hover {
@@ -115,70 +136,247 @@ a i {
 }
 
 div.images {
-    height: 70%;
-    width: 50%;
-    margin: 55px 0px 0px 0px;
-    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 909px;
+
+    margin: 0px 8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 div.images img {
-    height: 100%;
-    width: 90%;
+    height: auto;
+    width: 100%;
+    max-width: 550px;
+    max-height: 330px;
 }
 
 div.profile {
-    width: 55%;
-    height: 45%;
+    height: auto;
+    width: 100%;
+    max-width: 240px;
+
     background: #181719;
-    position: absolute;
-    top: 84%;
-    left: 30.5%;
+    
     display: flex;
     flex-wrap: wrap;
+
+    margin: -3rem 3rem 0px 0px;
+
+    font-size: 1rem;
 }
 
-div.profile img {
-    height: 40%;
-    width: 23%;
+div.images div.profile img {
+    height: auto;
+    width: 100%;
+    max-width: 50px;
+    
+    padding: 2rem;
+    
     border-radius: 50%;
-    padding: 20px;
 }
 
 div.header {
-    margin-top: 23px;
-    margin-bottom: 2px;
+    margin-top: 2.4rem;
     font-family: Montserrat;
+    width: 100%;
+    max-width: 50%;
 }
 
-div.header h3 {
-    font-size: 1.2rem;
+div.header h2 {
+    font-size: 1.6em;
 }
 
 div.header h4 {
-    font-size: .8rem;
+    font-size: 1.2em;
     color: #828282;
 }
 
-div.profile h2{
+div.profile h3{
     margin: 5px 0px 0px 20px;
-    font-size: 1.2rem;
-    width: 60%;
+    font-size: 1.6em;
+    width: 80%;
 }
 
 footer {
-    height: 15%;
+    height: auto;
     width: 100%;
+
     display: flex;
-    align-items: flex-end;
     justify-content: center;   
+
+
+    position: absolute;
+    bottom: 10px;
+
     font-family: Montserrat;
     font-weight: 600;
     font-size: .8rem;
+
     color: #A9A9A9;
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1050px) {
     :root {
-        font-size: 13px;
+        font-size: 60%;
+    }
+
+    div.images img {
+        max-width: 450px;
+        max-height: 230px;
+    }
+}
+
+@media(max-width: 838px) {
+    :root {
+        font-size: 52%;
+    }
+
+    div.texts {
+        max-width: 195px
+    }
+
+    div.profile {
+        max-width: 65%;
+    }
+}
+
+/* mobile style */
+
+@media (max-width: 670px) {
+    :root {
+        font-size: 50%;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+
+    div#container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header div.logo {
+        margin-left: 1.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header div.menu-toggle {
+        height: auto;
+        width: 40px;
+        
+        margin-right: 1.5rem;
+    }
+
+    .one,
+    .two,
+    .three {
+        height: 6px;
+        width: 100%;
+
+        margin: 6px auto;
+
+        background: #F2F2F2;
+    }
+
+    /* header div.menu-toggle.on {
+         menu mobile 
+    } */
+
+    main {
+        flex-wrap: wrap;
+        margin: 5rem 1.5rem;
+    }
+
+    div.texts {
+        max-width: 80%;
+        margin: 0px;
+    }
+    
+    div.texts h1 {
+        font-size: 4.7rem;
+    }
+    
+    div.texts p {
+        width: 70%;
+    }
+
+    div.texts a {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+    }
+
+    div.images {
+        margin: 0px;
+    }
+
+    div.images img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    div.profile {
+        margin-top: -8rem;
+
+        font-size: 2rem;
+
+        box-shadow: 1rem 1rem 1rem black;
+    }
+
+    div.header {
+        margin-top: 2rem;
+    }
+
+    footer {
+        width: 100%;
+        
+        position: static;
+        margin-bottom: 2rem;
+        align-self: center;
+    }
+    
+    footer p {
+        padding-top: .7rem;
+        border-top: 1px solid #A9A9A9;
+    }
+}
+
+@media (max-width: 514px) {
+    :root {
+        font-size: 35%;
+    }
+
+    header div.logo {
+        height: 25px;
+    }
+
+    header div.menu-toggle .one,
+    .two,
+    .three {
+        height: 5px;
+    }
+
+}
+
+@media (max-width: 372px) {
+    :root {
+        font-size: 30%;
+    }
+
+    header div.menu-toggle .one,
+    .two,
+    .three {
+        height: 4px;
     }
 }
