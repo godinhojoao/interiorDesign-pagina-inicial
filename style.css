@@ -364,11 +364,12 @@ footer {
     
     div.texts p {
         width: 70%;
+        font-size: 3rem;
     }
 
     div.texts a {
         margin-bottom: 4rem;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     div.images {
